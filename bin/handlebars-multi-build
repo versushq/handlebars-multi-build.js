@@ -1,0 +1,37 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+const handlebarsPath = require.resolve('handlebars');
+const Precompiler = require(path.join(path.dirname(handlebarsPath), "../dist/cjs/precompiler"));
+
+const precompile = (config) => {
+    Precompiler.loadTemplates(config, function(err, opts) {
+        if (err) {
+            throw err;
+        }
+
+        if (opts.help || (!opts.templates.length && !opts.version)) {
+            // TODO:
+        } else {
+            Precompiler.cli(opts);
+        }
+    });
+}
+
+fs.readFile(process.argv[2], 'utf8', function (err, data) {
+  if (err) {
+    throw err;
+  }
+  /**
+   * Supports multi build by providing an array in the config file
+   */
+  const config = JSON.parse(data);
+  if (Array.isArray(config)) {
+      config.forEach((setting) => {
+          precompile(setting);
+      });
+  } else {
+      precompile(config);
+  }
+});

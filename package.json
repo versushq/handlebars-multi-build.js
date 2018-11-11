@@ -1,0 +1,22 @@
+{
+  "name": "handlebars-multi-build",
+  "version": "0.1.0",
+  "description": "A CLI Wrapper around the Handlebars precompiler for multiple outputs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/versushq/handlebars-multi-build.js.git"
+  },
+  "author": "Eric Stobbart",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/versushq/handlebars-multi-build.js/issues"
+  },
+  "homepage": "https://github.com/versushq/handlebars-multi-build.js#readme",
+  "dependencies": {
+    "handlebars": "^4.0.12"
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "files": [
+        "./demo/foo.hbs",
+        "./demo/bar.hbs"
+    ],
+    "output": "out/two-single.js",
+    "extension": "hbs"
+}

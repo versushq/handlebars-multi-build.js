@@ -1,0 +1,17 @@
+[
+    {
+        "files": [
+            "./demo/foo.hbs"
+        ],
+        "output": "out/one-multi.js",
+        "extension": "hbs"
+    },
+    {
+        "files": [
+            "./demo/foo.hbs",
+            "./demo/bar.hbs"
+        ],
+        "output": "out/two-multi.js",
+        "extension": "hbs"
+    }
+]
